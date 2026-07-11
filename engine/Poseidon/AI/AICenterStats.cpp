@@ -26,6 +26,7 @@
 #include <Poseidon/Network/Network.hpp>
 #include <Poseidon/Game/Chat.hpp>
 #include <Poseidon/Foundation/Platform/AppConfig.hpp>
+#include <Poseidon/Dev/Telemetry/MissionTelemetry.hpp>
 #include <Poseidon/Foundation/Platform/GamePaths.hpp>
 
 #include <Poseidon/Foundation/Enums/EnumNames.hpp>
@@ -296,6 +297,8 @@ void AIStats::OnMissionStart()
 
 void AIStats::OnVehicleDestroyed(EntityAI* killed, EntityAI* killer)
 {
+    Poseidon::Dev::Telemetry::MissionTelemetry::RecordDeath(killed, killer);
+
     if (!killed)
     {
         return;
@@ -590,6 +593,8 @@ void AIStats::OnVehicleDestroyed(EntityAI* killed, EntityAI* killer)
 
 void AIStats::OnVehicleDamaged(EntityAI* injured, EntityAI* killer, float damage, RString ammo)
 {
+    Poseidon::Dev::Telemetry::MissionTelemetry::RecordDamage(injured, killer, damage, ammo);
+
     if (injured)
         _mission.RecordReportInjury(injured, killer, damage, ammo);
 }

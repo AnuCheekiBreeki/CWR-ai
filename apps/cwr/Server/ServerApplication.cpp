@@ -57,6 +57,7 @@ void handleInt(int sig);
 using namespace Poseidon;
 
 #include <Poseidon/Foundation/Logging/Logging.hpp>
+#include <Poseidon/Dev/Telemetry/MissionTelemetry.hpp>
 #include <Poseidon/Dev/Harness/HarnessServer.hpp>
 #include <Poseidon/Dev/Harness/HarnessBuiltins.hpp>
 #include <Poseidon/Dev/Harness/HarnessMissionStateTracker.hpp>
@@ -487,6 +488,7 @@ void ServerApplication::DedicatedServerLoop()
             if (elapsed >= static_cast<DWORD>(durationSec * 1000))
             {
                 LOG_INFO(Mission, "[timeout] Duration {}s exceeded", durationSec);
+                Poseidon::Dev::Telemetry::MissionTelemetry::RecordMissionEvent("timeout");
                 GetNetworkManager().Close(); // notify clients before exit
                 CleanupSimulateMission();
                 Sleep(100);

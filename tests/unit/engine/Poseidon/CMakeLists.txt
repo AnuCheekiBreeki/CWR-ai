@@ -298,6 +298,7 @@ list(APPEND POSEIDON_TEST_SOURCES
     # Debug tests (batch-11)
     Dev/Debug/test_debug_profiling.cpp
     Dev/Debug/test_debug_commands.cpp
+    Dev/Telemetry/test_mission_telemetry.cpp
 
     # Mission introspection
     Game/Mission/test_mission_info.cpp

@@ -21,6 +21,7 @@ file(GLOB_RECURSE POSEIDON_ALL_SOURCES CONFIGURE_DEPENDS
     "Dev/Debug/*.cpp"
     "Dev/Diag/*.cpp"
     "Dev/Harness/*.cpp"
+    "Dev/Telemetry/*.cpp"
     "Game/*.cpp"
     "Graphics/*.cpp"
     "Input/*.cpp"

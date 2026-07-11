@@ -252,6 +252,12 @@ public:
     /// Write MP after-action report to timestamped file in UserDir
     bool WriteMPReport() const { return _writeMPReport; }
 
+    /// JSONL mission telemetry output path (--telemetry), empty = disabled
+    const std::string& GetTelemetryPath() const { return _telemetryPath; }
+
+    /// Entity track sample rate in Hz for mission telemetry (--telemetry-hz, default 2)
+    int GetTelemetryHz() const { return _telemetryHz; }
+
     bool AutoTest() const { return _autoTest; }
     
     /// Auto-keys specification for scripted input injection (--auto-keys "frame:scancode,...")
@@ -408,6 +414,8 @@ private:
     bool _logFileOps = false;
     bool _netLog = false;
     bool _writeMPReport = false;
+    std::string _telemetryPath;
+    int _telemetryHz = 2;
     bool _autoTest = false;
     bool _devMode = false;
     float _confirmRevertTimeoutSeconds = 0.f; // 0 → engine default (15s)
