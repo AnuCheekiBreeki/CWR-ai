@@ -1,0 +1,137 @@
+name: Build
+
+# x64 builds for Windows (compatible with Windows 10 Pro) and Ubuntu 22.04.
+# GitHub-hosted runners do not expose a discrete GPU; compilation does not
+# require proprietary NVIDIA drivers (those matter only at runtime on your PC).
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  CCACHE_BASEDIR: ${{ github.workspace }}
+  CCACHE_SLOPPINESS: pch_defines,time_macros,include_file_mtime,include_file_ctime
+  CCACHE_NOHASHDIR: true
+
+jobs:
+  build-linux:
+    name: Ubuntu 22.04 x64 / RelWithDebInfo
+    runs-on: ubuntu-22.04
+    env:
+      CWR_PRESET: linux-x64-clang-rwdi
+      CWR_VCPKG_TRIPLET: x64-linux-clang
+      CWR_BUILD_DIR: build/linux-x64-clang-rwdi
+      CWR_CTEST_EXCLUDE: 'PoseidonTests - OAL -'
+      CWR_DIST_DIR: dist/x64-linux-rwdi
+      CWR_ARTIFACT_PREFIX: Linux-x64-rwdi
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build metadata
+        id: build_metadata
+        shell: bash
+        run: echo "sha_short=${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
+
+      - name: Build and test
+        uses: ./.github/actions/build-cwr
+        with:
+          preset: ${{ env.CWR_PRESET }}
+          vcpkg-triplet: ${{ env.CWR_VCPKG_TRIPLET }}
+          build-dir: ${{ env.CWR_BUILD_DIR }}
+          ctest-exclude: ${{ env.CWR_CTEST_EXCLUDE }}
+
+      - name: Upload Game
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.CWR_ARTIFACT_PREFIX }}-Game-${{ steps.build_metadata.outputs.sha_short }}
+          path: ${{ env.CWR_DIST_DIR }}/PoseidonGame
+          if-no-files-found: error
+
+      - name: Upload GameDemo
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.CWR_ARTIFACT_PREFIX }}-GameDemo-${{ steps.build_metadata.outputs.sha_short }}
+          path: ${{ env.CWR_DIST_DIR }}/PoseidonGameDemo
+          if-no-files-found: error
+
+      - name: Upload Server
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.CWR_ARTIFACT_PREFIX }}-Server-${{ steps.build_metadata.outputs.sha_short }}
+          path: ${{ env.CWR_DIST_DIR }}/PoseidonServer
+          if-no-files-found: error
+
+  build-windows:
+    name: Windows x64 / RelWithDebInfo
+    # GitHub no longer provides Windows 10 runners; windows-2022 produces x64
+    # binaries that run on Windows 10 Pro with the same Clang/vcpkg toolchain.
+    runs-on: windows-2022
+    env:
+      CWR_PRESET: win-x64-clang-rwdi
+      CWR_VCPKG_TRIPLET: x64-windows-clang
+      CWR_BUILD_DIR: build/win-x64-clang-rwdi
+      CWR_CTEST_EXCLUDE: 'PoseidonTests - (OAL -|PAAEncoder -|Image - Save to \.paa|World state file format --|PreviewImage - saveToFile writes|PreviewImageRGB - saveToFile writes)'
+      CWR_DIST_DIR: dist/x64-win-rwdi
+      CWR_ARTIFACT_PREFIX: Windows-x64-rwdi
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build metadata
+        id: build_metadata
+        shell: bash
+        run: echo "sha_short=${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
+
+      - name: Build and test
+        uses: ./.github/actions/build-cwr
+        with:
+          preset: ${{ env.CWR_PRESET }}
+          vcpkg-triplet: ${{ env.CWR_VCPKG_TRIPLET }}
+          build-dir: ${{ env.CWR_BUILD_DIR }}
+          ctest-exclude: ${{ env.CWR_CTEST_EXCLUDE }}
+
+      - name: Upload Game
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.CWR_ARTIFACT_PREFIX }}-Game-${{ steps.build_metadata.outputs.sha_short }}
+          path: |
+            ${{ env.CWR_DIST_DIR }}/PoseidonGame.exe
+            ${{ env.CWR_DIST_DIR }}/OpenAL32.dll
+            ${{ env.CWR_DIST_DIR }}/OpenAL-Soft.LICENSE.txt
+          if-no-files-found: error
+
+      - name: Upload GameDemo
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.CWR_ARTIFACT_PREFIX }}-GameDemo-${{ steps.build_metadata.outputs.sha_short }}
+          path: |
+            ${{ env.CWR_DIST_DIR }}/PoseidonGameDemo.exe
+            ${{ env.CWR_DIST_DIR }}/OpenAL32.dll
+            ${{ env.CWR_DIST_DIR }}/OpenAL-Soft.LICENSE.txt
+          if-no-files-found: error
+
+      - name: Upload Server
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.CWR_ARTIFACT_PREFIX }}-Server-${{ steps.build_metadata.outputs.sha_short }}
+          path: ${{ env.CWR_DIST_DIR }}/PoseidonServer.exe
+          if-no-files-found: error
+
+      - name: Upload symbols
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.CWR_ARTIFACT_PREFIX }}-Symbols-${{ steps.build_metadata.outputs.sha_short }}
+          path: |
+            ${{ env.CWR_DIST_DIR }}/PoseidonGame.pdb
+            ${{ env.CWR_DIST_DIR }}/PoseidonGameDemo.pdb
+            ${{ env.CWR_DIST_DIR }}/PoseidonServer.pdb
+          if-no-files-found: error
