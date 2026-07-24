@@ -1,0 +1,20 @@
+; Kept for compatibility — radio-menu items call cheats directly via ActiveText action.
+; Optional: ["cmd"] exec "\aio\scripts\menu_select.sqs"
+
+_cmd = ""
+? (count _this > 0) : _cmd = _this select 0
+? (_cmd == "") : exit
+
+closeDialog 0
+
+? _cmd == "arsenal" : [] exec "\aio\scripts\arsenal\open_arsenal.sqs"; exit
+? _cmd == "heal" : [] exec "\aio\scripts\cheats\heal.sqs"; exit
+? _cmd == "god" : [] exec "\aio\scripts\cheats\godmode.sqs"; exit
+? _cmd == "ammo" : [] exec "\aio\scripts\cheats\ammo.sqs"; exit
+? _cmd == "teleport" : [] exec "\aio\scripts\cheats\teleport.sqs"; exit
+? _cmd == "skiptime" : [] exec "\aio\scripts\cheats\skiptime.sqs"; exit
+? _cmd == "acctime" : [] exec "\aio\scripts\cheats\acctime.sqs"; exit
+? _cmd == "captive" : [] exec "\aio\scripts\cheats\captive.sqs"; exit
+
+hint format ["AIO: unknown command %1", _cmd]
+exit

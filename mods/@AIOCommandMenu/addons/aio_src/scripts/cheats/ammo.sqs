@@ -1,0 +1,21 @@
+; Refill magazines for currently equipped weapons (OFP-style shared classnames).
+[] exec "\aio\scripts\arsenal\catalog.sqs"
+~0.1
+
+_weps = weapons player
+_i = 0
+#loop
+? (_i >= count _weps) : goto "done"
+_cls = _weps select _i
+? (_cls in VA_Magazine) : player addMagazine _cls; player addMagazine _cls; player addMagazine _cls
+? (_cls in VA_HandgunMag) : player addMagazine _cls; player addMagazine _cls; player addMagazine _cls
+; Also try weapon classname as magazine (common OFP pattern)
+player addMagazine _cls
+player addMagazine _cls
+_i = _i + 1
+goto "loop"
+
+#done
+hint "AIO: Magazines refilled for equipped weapons"
+~0.05
+exit

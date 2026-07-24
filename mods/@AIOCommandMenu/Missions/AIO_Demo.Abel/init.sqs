@@ -1,0 +1,6 @@
+; Open AIO Command Menu shortly after mission start.
+~1
+hint "AIO ready — action menu: AIO Command Menu / Virtual Arsenal"
+~1
+[] exec "\aio\scripts\open_menu.sqs"
+exit

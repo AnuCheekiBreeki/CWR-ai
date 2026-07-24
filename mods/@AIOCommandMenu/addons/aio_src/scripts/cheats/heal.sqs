@@ -1,0 +1,5 @@
+; Heal player
+player setDamage 0
+hint "AIO: Healed"
+~0.05
+exit

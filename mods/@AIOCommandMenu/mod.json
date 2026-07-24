@@ -1,0 +1,6 @@
+{
+  "modId": "aio_command_menu",
+  "name": "AIO Command Menu (Poseidon MVP)",
+  "version": "0.1.0",
+  "description": "Poseidon/CWR MVP inspired by All-In-One Command Menu: root command menu with Virtual Arsenal and cheats (heal, god mode, ammo, teleport, time)."
+}

@@ -1,0 +1,5 @@
+// AIO Command Menu demo — dialogs via description.ext (ExtParsMission).
+#include "resource_aio.hpp"
+
+respawn = "BASE";
+respawnDelay = 3;

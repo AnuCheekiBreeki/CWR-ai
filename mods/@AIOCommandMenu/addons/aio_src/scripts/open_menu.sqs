@@ -1,0 +1,20 @@
+; AIO Command Menu — open vanilla-style radio / commanding menu lookalike.
+; [] exec "\aio\scripts\open_menu.sqs"
+
+? !(alive player) : exit
+
+_ok = createDialog "RscDisplayAIOCommandMenu"
+? !_ok : hint "AIO: failed to create dialog (install resource-extra?)"; exit
+
+? (isNil "AIO_GodMode") : AIO_GodMode = false
+? (isNil "AIO_Captive") : AIO_Captive = false
+? (isNil "AIO_AccTime") : AIO_AccTime = 1
+
+; Refresh toggle labels (same pattern as original AIO cheats menu)
+? AIO_GodMode : ctrlSetText [77103, "3  God mode: ON"]
+? !(AIO_GodMode) : ctrlSetText [77103, "3  God mode: OFF"]
+? AIO_Captive : ctrlSetText [77108, "8  Captive: ON"]
+? !(AIO_Captive) : ctrlSetText [77108, "8  Captive: OFF"]
+ctrlSetText [77107, format ["7  AccTime x%1", AIO_AccTime]]
+ctrlSetText [77110, "Cheats"]
+exit

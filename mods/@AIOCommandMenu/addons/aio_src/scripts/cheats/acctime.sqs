@@ -1,0 +1,27 @@
+; Cycle acceleration: 1 -> 2 -> 4 -> 1
+? (isNil "AIO_AccTime") : AIO_AccTime = 1
+
+? (AIO_AccTime == 1) : goto "to2"
+? (AIO_AccTime == 2) : goto "to4"
+goto "to1"
+
+#to2
+AIO_AccTime = 2
+setAccTime 2
+hint "AIO: AccTime x2"
+goto "done"
+
+#to4
+AIO_AccTime = 4
+setAccTime 4
+hint "AIO: AccTime x4"
+goto "done"
+
+#to1
+AIO_AccTime = 1
+setAccTime 1
+hint "AIO: AccTime x1"
+
+#done
+~0.05
+exit
