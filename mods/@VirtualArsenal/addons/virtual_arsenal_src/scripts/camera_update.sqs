@@ -1,0 +1,21 @@
+; Reposition VA_Cam around the player using VA_CamAngle / VA_CamDist / VA_CamHeight.
+
+? isNull VA_Cam : exit
+? isNull player : exit
+
+_ang = VA_CamAngle
+_dist = VA_CamDist
+_h = VA_CamHeight
+_px = (position player) select 0
+_py = (position player) select 1
+_pz = (position player) select 2
+
+_rad = _ang * 3.14159265 / 180
+_cx = _px + _dist * (sin _rad)
+_cy = _py + _dist * (cos _rad)
+_cz = _pz + _h
+
+VA_Cam camSetPos [_cx, _cy, _cz]
+VA_Cam camSetTarget player
+VA_Cam camCommit 0
+exit

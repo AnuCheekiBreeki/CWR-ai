@@ -1,0 +1,35 @@
+; Virtual Arsenal — open dialog, load catalog, wire buttons, start camera orbit.
+; Invoked from UserActions: [] exec "\virtual_arsenal\scripts\open.sqs"
+
+? !(alive player) : goto "end"
+
+[] exec "\virtual_arsenal\scripts\catalog.sqs"
+
+_ok = createDialog "RscDisplayVirtualArsenal"
+? !_ok : hint "Virtual Arsenal: failed to create dialog"; goto "end"
+
+VA_Category = "primary"
+VA_CamAngle = 0
+VA_CamDist = 3.5
+VA_CamHeight = 1.4
+
+[] exec "\virtual_arsenal\scripts\fill.sqs"
+[] exec "\virtual_arsenal\scripts\camera.sqs"
+
+buttonSetAction [77021, "VA_Category = ""primary""; [] exec ""\virtual_arsenal\scripts\fill.sqs"""]
+buttonSetAction [77022, "VA_Category = ""secondary""; [] exec ""\virtual_arsenal\scripts\fill.sqs"""]
+buttonSetAction [77023, "VA_Category = ""handgun""; [] exec ""\virtual_arsenal\scripts\fill.sqs"""]
+buttonSetAction [77024, "VA_Category = ""binocular""; [] exec ""\virtual_arsenal\scripts\fill.sqs"""]
+buttonSetAction [77025, "VA_Category = ""magazine""; [] exec ""\virtual_arsenal\scripts\fill.sqs"""]
+buttonSetAction [77026, "VA_Category = ""item""; [] exec ""\virtual_arsenal\scripts\fill.sqs"""]
+
+buttonSetAction [77041, "[] exec ""\virtual_arsenal\scripts\apply.sqs"""]
+buttonSetAction [77042, "[] exec ""\virtual_arsenal\scripts\clear.sqs"""]
+buttonSetAction [77043, "VA_CamAngle = VA_CamAngle - 20; [] exec ""\virtual_arsenal\scripts\camera_update.sqs"""]
+buttonSetAction [77044, "VA_CamAngle = VA_CamAngle + 20; [] exec ""\virtual_arsenal\scripts\camera_update.sqs"""]
+buttonSetAction [77045, "closeDialog 0"]
+
+ctrlSetText [77011, "Primary / Launcher / Handgun / Optics / Mags / Items. Apply equips selection. Rotate orbits camera."]
+
+#end
+exit

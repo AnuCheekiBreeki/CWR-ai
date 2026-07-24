@@ -1,0 +1,6 @@
+; Open Virtual Arsenal shortly after mission start.
+~1
+hint "Virtual Arsenal ready — use action menu or wait for auto-open"
+~1
+[] exec "\virtual_arsenal\scripts\open.sqs"
+exit

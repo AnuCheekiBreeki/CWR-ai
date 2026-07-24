@@ -1,0 +1,31 @@
+; Apply the currently selected list entry to the player.
+
+_sel = lbCurSel 77030
+? _sel < 0 : hint "Select a class first"; exit
+
+_class = lbData [77030, _sel]
+? _class == "" : _class = lbText [77030, _sel]
+? _class == "" : hint "Empty selection"; exit
+
+? VA_Category == "magazine" : goto "addmag"
+? VA_Category == "item" : goto "addmag"
+? VA_Category == "handgun_mag" : goto "addmag"
+
+; Weapons: strip conflicting slot gear then add
+? VA_Category == "primary" : player removeWeapon (primaryWeapon player)
+? VA_Category == "secondary" : player removeWeapon (secondaryWeapon player)
+
+player addWeapon _class
+
+; Prefer matching magazine classname when present in catalog
+? _class in VA_Magazine : player addMagazine _class
+
+hint format ["Equipped %1", _class]
+[] exec "\virtual_arsenal\scripts\fill.sqs"
+exit
+
+#addmag
+player addMagazine _class
+hint format ["Added magazine %1", _class]
+[] exec "\virtual_arsenal\scripts\fill.sqs"
+exit

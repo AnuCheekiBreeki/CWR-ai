@@ -77,3 +77,4 @@ target/
 !docs/**/*.png
 !tests/missions/screenshot/**/*.bmp
 !tests/missions/screenshot/**/*.png
+mods/tools/__pycache__/

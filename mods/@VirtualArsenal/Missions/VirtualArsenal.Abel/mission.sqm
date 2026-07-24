@@ -1,0 +1,47 @@
+version=11;
+class Mission
+{
+	randomSeed=7700101;
+	class Intel
+	{
+		briefingName="Virtual Arsenal";
+		overviewText="Browse and equip CfgWeapons with an orbit camera preview.";
+	};
+	class Groups
+	{
+		items=1;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2650.0,40.0,2550.0};
+					id=0;
+					side="WEST";
+					vehicle="SoldierWB";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=1.0;
+				};
+			};
+		};
+	};
+};
+class Intro
+{
+	randomSeed=7700102;
+	class Intel {};
+};
+class OutroWin
+{
+	randomSeed=7700103;
+	class Intel {};
+};
+class OutroLoose
+{
+	randomSeed=7700104;
+	class Intel {};
+};

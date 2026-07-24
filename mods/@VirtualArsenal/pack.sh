@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+# Pack @VirtualArsenal into addons/virtual_arsenal.pbo and refresh the weapon catalog.
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+MOD="$ROOT/@VirtualArsenal"
+SRC="$MOD/addons/virtual_arsenal_src"
+OUT="$MOD/addons/virtual_arsenal.pbo"
+TOOLS="$ROOT/tools"
+
+GAME_DIR="${CWR_GAME_DIR:-${POSEIDON_GAME_DIR:-}}"
+if [[ -z "$GAME_DIR" ]]; then
+  for candidate in \
+      "$ROOT/../packages/Remaster" \
+      "$HOME/cwr-game/Remaster" \
+      "$HOME/cwr-assets/Remastered/Remastered"
+  do
+    if [[ -d "$candidate/BIN" || -d "$candidate/bin" ]]; then
+      GAME_DIR="$candidate"
+      break
+    fi
+  done
+fi
+
+if [[ -n "$GAME_DIR" && -d "$GAME_DIR" ]]; then
+  echo "==> scanning weapons from $GAME_DIR"
+  python3 "$TOOLS/scan_weapons.py" "$GAME_DIR" \
+      -o "$SRC/scripts/catalog.sqs" \
+      --json "$MOD/catalog.json"
+else
+  echo "warning: no game data dir found; keeping existing catalog.sqs" >&2
+  echo "         set CWR_GAME_DIR to Remaster root (with BIN/, AddOns/)" >&2
+fi
+
+echo "==> packing $SRC -> $OUT"
+python3 "$TOOLS/pack_pbo.py" "$SRC" "$OUT" --prefix virtual_arsenal
+
+echo "==> done"
+echo "    Load with:  --mod $MOD"
+echo "    or copy $MOD next to other @mods and enable in the Mods screen."
+ls -la "$OUT"
