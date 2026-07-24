@@ -587,6 +587,17 @@ void AppConfig::ParseCommandLine(int argc, char** argv)
                                         "Write MP after-action report to a timestamped file in UserDir"),
                    CliHelpVisibility::Dev);
 
+        showOption(debugGroup
+                       ->add_option("--telemetry", _telemetryPath,
+                                    "Write JSONL mission telemetry (tracks + combat events) to the given path"),
+                   CliHelpVisibility::Dev);
+
+        showOption(debugGroup
+                       ->add_option("--telemetry-hz", _telemetryHz,
+                                    "Entity track sample rate for --telemetry (Hz, default 2)")
+                       ->check(CLI::Range(1, 20)),
+                   CliHelpVisibility::Dev);
+
         showOption(debugGroup->add_flag("--autotest,--auto-test", _autoTest, "Auto test mode"), CliHelpVisibility::Dev);
 
         showOption(

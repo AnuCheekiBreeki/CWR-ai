@@ -11,6 +11,7 @@
 #include <Poseidon/Core/ModSystem.hpp>
 #include <Poseidon/Core/Version.hpp>
 #include <Poseidon/Dev/Diag/PerfTrace.hpp>
+#include <Poseidon/Dev/Telemetry/MissionTelemetry.hpp>
 #include <Poseidon/Core/TaskPool.hpp>
 #include <Poseidon/Network/NetworkImpl.hpp>
 #include <thread>
@@ -132,6 +133,20 @@ bool GameBase::ParseCommandLine(const char* commandLine)
         else
         {
             LOG_ERROR(Core, "PerfTrace: failed to open {} for writing", perfTrace);
+        }
+    }
+
+    if (const auto& telemetryPath = AppConfig::Instance().GetTelemetryPath(); !telemetryPath.empty())
+    {
+        if (Poseidon::Dev::Telemetry::MissionTelemetry::Enable(telemetryPath.c_str(),
+                                                               AppConfig::Instance().GetTelemetryHz()))
+        {
+            LOG_INFO(Core, "MissionTelemetry enabled: writing JSONL to {} ({} Hz)", telemetryPath,
+                     AppConfig::Instance().GetTelemetryHz());
+        }
+        else
+        {
+            LOG_ERROR(Core, "MissionTelemetry: failed to open {} for writing", telemetryPath);
         }
     }
 

@@ -8,6 +8,7 @@
 #include <Poseidon/Core/ModSystem.hpp>
 #include <Poseidon/Core/Version.hpp>
 #include <Poseidon/Foundation/Logging/Logging.hpp>
+#include <Poseidon/Dev/Telemetry/MissionTelemetry.hpp>
 #include <Poseidon/Core/Config/Config.hpp>
 #include <Poseidon/Network/NetworkImpl.hpp>
 #include <Poseidon/Network/NetworkMissionTransfer.hpp>
@@ -359,6 +360,8 @@ void NetworkServer::SimulateDS()
     {
         static unsigned long long frameCount = 0;
         frameCount++;
+
+        Poseidon::Dev::Telemetry::MissionTelemetry::MaybeSampleWorld();
 
         int statsInterval = AppConfig::Instance().GetStatsInterval();
         if (statsInterval > 0)
@@ -784,6 +787,7 @@ void NetworkServer::SimulateDS()
                         if (simulateMode)
                         {
                             LOG_INFO(Mission, "[loaded]");
+                            Poseidon::Dev::Telemetry::MissionTelemetry::RecordMissionEvent("loaded");
                             SetGameState(NGSBriefing);
                         }
                     }
@@ -880,6 +884,7 @@ void NetworkServer::SimulateDS()
                 if (simulateMode)
                 {
                     LOG_INFO(Mission, "[complete]");
+                    Poseidon::Dev::Telemetry::MissionTelemetry::RecordMissionEvent("complete");
                     GApp->m_closeRequest = true;
                     break;
                 }

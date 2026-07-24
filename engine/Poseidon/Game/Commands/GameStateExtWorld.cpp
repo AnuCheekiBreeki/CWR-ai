@@ -33,6 +33,7 @@
 #include <Poseidon/Game/UiActions.hpp>
 #include <Poseidon/Foundation/Logging/Logging.hpp>
 #include <Poseidon/Foundation/Platform/AppConfig.hpp>
+#include <Poseidon/Dev/Telemetry/MissionTelemetry.hpp>
 
 #include <ctype.h>
 #include <time.h>
@@ -787,7 +788,10 @@ GameValue ForceEnd(const GameState* state)
 GameValue EndGame(const GameState* state)
 {
     if (AppConfig::Instance().IsSimulateMode())
+    {
         LOG_INFO(Mission, "[endGame]");
+        Poseidon::Dev::Telemetry::MissionTelemetry::RecordMissionEvent("endGame");
+    }
 
     const bool automationMissionExit = AppConfig::Instance().IsSimulateMode() ||
                                        !AppConfig::Instance().GetTestMissionPath().empty() ||
