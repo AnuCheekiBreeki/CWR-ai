@@ -1,0 +1,6 @@
+; Map-click teleport for player
+hint "AIO: Open map and click to teleport"
+forceMap true
+onMapSingleClick "player setPos _pos; onMapSingleClick """"; forceMap false; hint ""AIO: Teleported"""
+~0.05
+exit

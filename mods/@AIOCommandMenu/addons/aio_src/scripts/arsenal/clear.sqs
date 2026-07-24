@@ -1,0 +1,6 @@
+; Strip all player weapons/magazines (keeps Throw/Put if the engine re-adds them).
+
+removeAllWeapons player
+hint "Gear cleared"
+[] exec "\aio\scripts\arsenal\fill.sqs"
+exit

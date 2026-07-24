@@ -1,0 +1,2146 @@
+{
+  "primary": [
+    {
+      "class": "6G30",
+      "base": "6G30Base",
+      "scopeWeapon": 2,
+      "scopeMagazine": 1,
+      "weaponType": "1 + \t16",
+      "magazineType": "4 * \t\t\t256",
+      "displayName": "6G30",
+      "magazines": [
+        "6G30Magazine"
+      ],
+      "model": "\\6g30\\6g30",
+      "picture": "\\6g30\\6g30.paa",
+      "source": "6G30.pbo:config.bin",
+      "category": "primary"
+    },
+    {
+      "class": "AK47",
+      "base": "Riffle",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "$STR_DN_AK47",
+      "magazines": [
+        "this"
+      ],
+      "model": "AK_47_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "primary"
+    },
+    {
+      "class": "AK47CZ",
+      "base": "AK47",
+      "scopeWeapon": 2,
+      "scopeMagazine": 0,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "$STR_DN_AK47_CZ",
+      "magazines": [
+        "AK47"
+      ],
+      "model": "AK_47_v58_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "primary"
+    },
+    {
+      "class": "AK47GrenadeLauncher",
+      "base": null,
+      "scopeWeapon": 2,
+      "scopeMagazine": 0,
+      "weaponType": 1,
+      "magazineType": null,
+      "displayName": "$STR_DN_AK47_GRENADE",
+      "magazines": [],
+      "model": "ak_47_granatomet_proxy",
+      "picture": "",
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "primary"
+    },
+    {
+      "class": "AK74",
+      "base": "Riffle",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "$STR_DN_AK74",
+      "magazines": [
+        "this"
+      ],
+      "model": "AK_74_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "primary"
+    },
+    {
+      "class": "AK74GrenadeLauncher",
+      "base": null,
+      "scopeWeapon": 2,
+      "scopeMagazine": 0,
+      "weaponType": 1,
+      "magazineType": null,
+      "displayName": "$STR_DN_AK74_GRENADE",
+      "magazines": [],
+      "model": "ak_74_granatomet_proxy",
+      "picture": "",
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "primary"
+    },
+    {
+      "class": "AK74SU",
+      "base": "AK74",
+      "scopeWeapon": 2,
+      "scopeMagazine": 0,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "$STR_DN_AK74_SU",
+      "magazines": [
+        "AK74"
+      ],
+      "model": "AK_74_SU_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "primary"
+    },
+    {
+      "class": "Bizon",
+      "base": "BizonBase",
+      "scopeWeapon": 2,
+      "scopeMagazine": 1,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "Bizon",
+      "magazines": [
+        "BizonMag"
+      ],
+      "model": "\\Bizon\\Bizon",
+      "picture": "\\bizon\\w_bizon.paa",
+      "source": "Bizon.pbo:config.bin",
+      "category": "primary"
+    },
+    {
+      "class": "FAL",
+      "base": "FALBase",
+      "scopeWeapon": 2,
+      "scopeMagazine": 0,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "FAL",
+      "magazines": [
+        "FALMag"
+      ],
+      "model": "\\O\\Guns\\FAL",
+      "picture": "\\O\\Guns\\w_fal.paa",
+      "source": "O.pbo:config.bin",
+      "category": "primary"
+    },
+    {
+      "class": "G36a",
+      "base": "G36aBase",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "G36a",
+      "magazines": [
+        "G36aMag"
+      ],
+      "model": "\\G36A\\G36",
+      "picture": "\\G36A\\w_g36.paa",
+      "source": "G36a.pbo:config.bin",
+      "category": "primary"
+    },
+    {
+      "class": "G36aMag",
+      "base": "G36aBase",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "G36aMag",
+      "magazines": [
+        "G36a"
+      ],
+      "model": "\\G36A\\G36",
+      "picture": "\\G36a\\m_G36.paa",
+      "source": "G36a.pbo:config.bin",
+      "category": "primary"
+    },
+    {
+      "class": "HK",
+      "base": "Riffle",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "HK",
+      "magazines": [
+        "this"
+      ],
+      "model": "HKM5_SD6_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN;O.pbo:config.bin",
+      "category": "primary"
+    },
+    {
+      "class": "HKG3",
+      "base": "HKG3Base",
+      "scopeWeapon": 2,
+      "scopeMagazine": 0,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "HKG3",
+      "magazines": [
+        "HKG3Mag"
+      ],
+      "model": "\\O\\Guns\\HKG3A4",
+      "picture": "\\O\\Guns\\w_HKG3.paa",
+      "source": "O.pbo:config.bin",
+      "category": "primary"
+    },
+    {
+      "class": "HuntingRifle",
+      "base": "HuntingRifleBase",
+      "scopeWeapon": 2,
+      "scopeMagazine": 1,
+      "weaponType": 1,
+      "magazineType": "1 * \t\t256",
+      "displayName": "HuntingRifle",
+      "magazines": [
+        "HuntingRifleMag"
+      ],
+      "model": "\\O_wp\\Remington",
+      "picture": "\\O_wp\\w_remigton.paa",
+      "source": "O_WP.PBO:config.bin",
+      "category": "primary"
+    },
+    {
+      "class": "Kozlice",
+      "base": null,
+      "scopeWeapon": 2,
+      "scopeMagazine": 0,
+      "weaponType": 1,
+      "magazineType": null,
+      "displayName": "$STR_DN_KOZLICE",
+      "magazines": [
+        "KozliceBall"
+      ],
+      "model": "\\kozl\\kozlice",
+      "picture": "\\kozl\\w_kozlice.paa",
+      "source": "kozl.pbo:config.cpp",
+      "category": "primary"
+    },
+    {
+      "class": "M16",
+      "base": "Riffle",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "M16",
+      "magazines": [
+        "M16",
+        "Mortar"
+      ],
+      "model": "m16_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN;O.pbo:config.bin",
+      "category": "primary"
+    },
+    {
+      "class": "M16GrenadeLauncher",
+      "base": null,
+      "scopeWeapon": 2,
+      "scopeMagazine": 0,
+      "weaponType": 1,
+      "magazineType": null,
+      "displayName": "$STR_DN_M16_GRENADE",
+      "magazines": [],
+      "model": "m16_granatomet_proxy",
+      "picture": "",
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "primary"
+    },
+    {
+      "class": "M16S",
+      "base": "M16",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "M16S",
+      "magazines": [
+        "M16",
+        "Mortar"
+      ],
+      "model": "m16_proxy",
+      "picture": "M16",
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "primary"
+    },
+    {
+      "class": "M21",
+      "base": "SniperRiffle",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "$STR_DN_M21",
+      "magazines": [
+        "this"
+      ],
+      "model": "M21_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "primary"
+    },
+    {
+      "class": "M4",
+      "base": "Riffle",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "M4",
+      "magazines": [
+        "M4",
+        "Mortar"
+      ],
+      "model": "XM-177E2_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN;XMS.pbo:config.bin",
+      "category": "primary"
+    },
+    {
+      "class": "M60",
+      "base": "MachineGun7_6Manual",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": "1\t + \t16",
+      "magazineType": "2 * \t\t256",
+      "displayName": "$STR_DN_M60_MG",
+      "magazines": [
+        "this"
+      ],
+      "model": "M60_MG_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "primary"
+    },
+    {
+      "class": "MM1",
+      "base": "Mm1Base",
+      "scopeWeapon": 2,
+      "scopeMagazine": 1,
+      "weaponType": "1 + \t16",
+      "magazineType": "8 * \t\t\t256",
+      "displayName": "MM1",
+      "magazines": [
+        "MM1Magazine"
+      ],
+      "model": "\\MM-1\\MM-1",
+      "picture": "\\MM-1\\mm-1.paa",
+      "source": "Mm-1.pbo:config.bin",
+      "category": "primary"
+    },
+    {
+      "class": "PK",
+      "base": "MachineGun7_6Manual",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": "1\t + \t16",
+      "magazineType": "2 * \t\t256",
+      "displayName": "$STR_DN_PK",
+      "magazines": [
+        "this"
+      ],
+      "model": "PK_MG_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "primary"
+    },
+    {
+      "class": "Steyr",
+      "base": "SteyrBase",
+      "scopeWeapon": 2,
+      "scopeMagazine": 1,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "Steyr",
+      "magazines": [
+        "SteyrMag"
+      ],
+      "model": "\\steyr\\steyr",
+      "picture": "\\Steyr\\w_steyr.paa",
+      "source": "Steyr.pbo:config.bin",
+      "category": "primary"
+    },
+    {
+      "class": "SVDDragunov",
+      "base": "SniperRiffle",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "$STR_DN_SVD",
+      "magazines": [
+        "this"
+      ],
+      "model": "SVD_dragunov_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "primary"
+    },
+    {
+      "class": "UZI",
+      "base": "UZIBase",
+      "scopeWeapon": 2,
+      "scopeMagazine": 0,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "UZI",
+      "magazines": [
+        "UZIMag"
+      ],
+      "model": "\\O\\Guns\\UZI",
+      "picture": "\\O\\Guns\\w_uzi.paa",
+      "source": "O.pbo:config.bin",
+      "category": "primary"
+    },
+    {
+      "class": "XMS",
+      "base": "M4",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "$STR_DN_ADD_XMS",
+      "magazines": [
+        "M4",
+        "Mortar"
+      ],
+      "model": "\\XMS\\XMS",
+      "picture": "\\XMS\\w_XMS.paa",
+      "source": "XMS.pbo:config.bin",
+      "category": "primary"
+    }
+  ],
+  "secondary": [
+    {
+      "class": "9K32Launcher",
+      "base": "AALauncher",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 16,
+      "magazineType": "6 * \t\t256",
+      "displayName": "$STR_DN_9K32",
+      "magazines": [
+        "this"
+      ],
+      "model": "9K32_Strela_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "secondary"
+    },
+    {
+      "class": "AALauncher",
+      "base": "CarlGustavLauncher",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 16,
+      "magazineType": "6 * \t\t256",
+      "displayName": "$STR_DN_AA",
+      "magazines": [
+        "this"
+      ],
+      "model": "Stinger_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "secondary"
+    },
+    {
+      "class": "AT4Launcher",
+      "base": "CarlGustavLauncher",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 16,
+      "magazineType": "6 * \t\t256",
+      "displayName": "$STR_DN_AT4",
+      "magazines": [
+        "this"
+      ],
+      "model": "AT-4_SpigotB_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "secondary"
+    },
+    {
+      "class": "CarlGustavLauncher",
+      "base": "LAWLauncher",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 16,
+      "magazineType": "6 * \t\t256",
+      "displayName": "CarlGustavLauncher",
+      "magazines": [
+        "this"
+      ],
+      "model": "carlgustav84_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN;Apac.pbo:config.bin;BMP2.pbo:config.bin;LaserGuided.pbo:config.bin;M2A2.pbo:config.bin;O.pbo:config.bin;oh58.pbo:config.bin;su25.pbo:config.cpp",
+      "category": "secondary"
+    },
+    {
+      "class": "LaserDesignator",
+      "base": "LaserDesignatorBase",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 16,
+      "magazineType": "6 * \t\t256",
+      "displayName": "LaserDesignator",
+      "magazines": [
+        "this"
+      ],
+      "model": "LLDR",
+      "picture": "CarlGustavLauncher",
+      "source": "LaserGuided.pbo:config.bin",
+      "category": "secondary"
+    },
+    {
+      "class": "LAWLauncher",
+      "base": "Default",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 16,
+      "magazineType": "2 * \t\t256",
+      "displayName": "LAWLauncher",
+      "magazines": [
+        "this"
+      ],
+      "model": "law_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN;Apac.pbo:config.bin;BMP2.pbo:config.bin;LaserGuided.pbo:config.bin;M2A2.pbo:config.bin;O.pbo:config.bin;oh58.pbo:config.bin;su25.pbo:config.cpp",
+      "category": "secondary"
+    },
+    {
+      "class": "RPGLauncher",
+      "base": "LAWLauncher",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 16,
+      "magazineType": "2 * \t\t256",
+      "displayName": "$STR_DN_RPG",
+      "magazines": [
+        "this"
+      ],
+      "model": "RPG7_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "secondary"
+    }
+  ],
+  "handgun": [
+    {
+      "class": "Beretta",
+      "base": "BerettaBase",
+      "scopeWeapon": 2,
+      "scopeMagazine": 0,
+      "weaponType": 2,
+      "magazineType": 32,
+      "displayName": "Beretta",
+      "magazines": [
+        "BerettaMag"
+      ],
+      "model": "\\O\\Guns\\Beretta92F",
+      "picture": "\\O\\Guns\\bereta.paa",
+      "source": "O.pbo:config.bin",
+      "category": "handgun"
+    },
+    {
+      "class": "CZ75",
+      "base": "CZ75Base",
+      "scopeWeapon": 2,
+      "scopeMagazine": 0,
+      "weaponType": 2,
+      "magazineType": 32,
+      "displayName": "CZ75",
+      "magazines": [
+        "CZ75Mag"
+      ],
+      "model": "\\O\\Guns\\CZ75",
+      "picture": "\\O\\Guns\\CZ75.paa",
+      "source": "O.pbo:config.bin",
+      "category": "handgun"
+    },
+    {
+      "class": "Glock",
+      "base": "GlockBase",
+      "scopeWeapon": 2,
+      "scopeMagazine": 0,
+      "weaponType": 2,
+      "magazineType": 32,
+      "displayName": "Glock",
+      "magazines": [
+        "GlockMag"
+      ],
+      "model": "\\O\\Guns\\Glock17",
+      "picture": "\\O\\Guns\\Glock.paa",
+      "source": "O.pbo:config.bin",
+      "category": "handgun"
+    },
+    {
+      "class": "GlockS",
+      "base": "GlockSBase",
+      "scopeWeapon": 2,
+      "scopeMagazine": 0,
+      "weaponType": 2,
+      "magazineType": 32,
+      "displayName": "GlockS",
+      "magazines": [
+        "GlockSMag"
+      ],
+      "model": "\\O_wp\\Glock17Sil",
+      "picture": "\\O_wp\\w_Glocksilent.paa",
+      "source": "O_WP.PBO:config.bin",
+      "category": "handgun"
+    },
+    {
+      "class": "Ingram",
+      "base": "IngramBase",
+      "scopeWeapon": 2,
+      "scopeMagazine": 0,
+      "weaponType": 2,
+      "magazineType": 32,
+      "displayName": "Ingram",
+      "magazines": [
+        "IngramMag"
+      ],
+      "model": "\\O_wp\\Ingram",
+      "picture": "\\O_wp\\w_ingram.paa",
+      "source": "O_WP.PBO:config.bin",
+      "category": "handgun"
+    },
+    {
+      "class": "Revolver",
+      "base": "RevolverBase",
+      "scopeWeapon": 2,
+      "scopeMagazine": 0,
+      "weaponType": 2,
+      "magazineType": 32,
+      "displayName": "Revolver",
+      "magazines": [
+        "RevolverMag"
+      ],
+      "model": "\\O_wp\\SaW",
+      "picture": "\\O_wp\\w_sam.paa",
+      "source": "O_WP.PBO:config.bin",
+      "category": "handgun"
+    },
+    {
+      "class": "Skorpion",
+      "base": "SkorpionBase",
+      "scopeWeapon": 2,
+      "scopeMagazine": 0,
+      "weaponType": 2,
+      "magazineType": 32,
+      "displayName": "Skorpion",
+      "magazines": [
+        "SkorpionMag"
+      ],
+      "model": "\\O\\Guns\\SA61Skorpion",
+      "picture": "\\O\\Guns\\skorpion.paa",
+      "source": "O.pbo:config.bin",
+      "category": "handgun"
+    },
+    {
+      "class": "Tokarev",
+      "base": "TokarevBase",
+      "scopeWeapon": 2,
+      "scopeMagazine": 0,
+      "weaponType": 2,
+      "magazineType": 32,
+      "displayName": "Tokarev",
+      "magazines": [
+        "TokarevMag"
+      ],
+      "model": "\\O\\Guns\\TokarevT33",
+      "picture": "\\O\\Guns\\tokarev.paa",
+      "source": "O.pbo:config.bin",
+      "category": "handgun"
+    }
+  ],
+  "binocular": [
+    {
+      "class": "Binocular",
+      "base": "Default",
+      "scopeWeapon": 2,
+      "scopeMagazine": 1,
+      "weaponType": 4096,
+      "magazineType": 0,
+      "displayName": "$STR_DN_BINOCULAR",
+      "magazines": [
+        "this"
+      ],
+      "model": "dalekohled_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "binocular"
+    },
+    {
+      "class": "NVGoggles",
+      "base": "Binocular",
+      "scopeWeapon": 2,
+      "scopeMagazine": 1,
+      "weaponType": 4096,
+      "magazineType": 0,
+      "displayName": "$STR_DN_NV_GOGGLES",
+      "magazines": [
+        "this"
+      ],
+      "model": "nvg_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "binocular"
+    }
+  ],
+  "magazine": [
+    {
+      "class": "6G30Magazine",
+      "base": "6G30Base",
+      "scopeWeapon": 1,
+      "scopeMagazine": 2,
+      "weaponType": "1 + \t16",
+      "magazineType": "4 * \t\t\t256",
+      "displayName": "6G30Magazine",
+      "magazines": [
+        "this"
+      ],
+      "model": "\\6g30\\6g30",
+      "picture": "\\6g30\\m_6g30.paa",
+      "source": "6G30.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "9K32Launcher",
+      "base": "AALauncher",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 16,
+      "magazineType": "6 * \t\t256",
+      "displayName": "$STR_DN_9K32",
+      "magazines": [
+        "this"
+      ],
+      "model": "9K32_Strela_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "AALauncher",
+      "base": "CarlGustavLauncher",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 16,
+      "magazineType": "6 * \t\t256",
+      "displayName": "$STR_DN_AA",
+      "magazines": [
+        "this"
+      ],
+      "model": "Stinger_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "AK47",
+      "base": "Riffle",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "$STR_DN_AK47",
+      "magazines": [
+        "this"
+      ],
+      "model": "AK_47_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "AK74",
+      "base": "Riffle",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "$STR_DN_AK74",
+      "magazines": [
+        "this"
+      ],
+      "model": "AK_74_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "AT3Launcher",
+      "base": "CarlGustavLauncher",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "AT3Launcher",
+      "magazines": [
+        "this"
+      ],
+      "model": "carlgustav84_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN;Apac.pbo:config.bin;BMP2.pbo:config.bin;LaserGuided.pbo:config.bin;M2A2.pbo:config.bin;O.pbo:config.bin;oh58.pbo:config.bin;su25.pbo:config.cpp",
+      "category": "magazine"
+    },
+    {
+      "class": "AT4Launcher",
+      "base": "CarlGustavLauncher",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 16,
+      "magazineType": "6 * \t\t256",
+      "displayName": "$STR_DN_AT4",
+      "magazines": [
+        "this"
+      ],
+      "model": "AT-4_SpigotB_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "BizonMag",
+      "base": "BizonBase",
+      "scopeWeapon": 1,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "BizonMag",
+      "magazines": [
+        "this"
+      ],
+      "model": "\\Bizon\\Bizon",
+      "picture": "\\Bizon\\m_bizon.paa",
+      "source": "Bizon.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "Browning",
+      "base": "MachineGun12_7",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "Browning",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "Cannon25HE",
+      "base": "Default",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "$STR_DN_ADD_M2A2_25",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "M2A2.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "Cannon30AP",
+      "base": "Cannon30HE",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "$STR_DN_OUT_V80_AP",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "BMP2.pbo:config.bin;O.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "Cannon30HE",
+      "base": "Default",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "$STR_DN_OUT_V80_HE",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "BMP2.pbo:config.bin;O.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "CarlGustavLauncher",
+      "base": "LAWLauncher",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 16,
+      "magazineType": "6 * \t\t256",
+      "displayName": "CarlGustavLauncher",
+      "magazines": [
+        "this"
+      ],
+      "model": "carlgustav84_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN;Apac.pbo:config.bin;BMP2.pbo:config.bin;LaserGuided.pbo:config.bin;M2A2.pbo:config.bin;O.pbo:config.bin;oh58.pbo:config.bin;su25.pbo:config.cpp",
+      "category": "magazine"
+    },
+    {
+      "class": "Ch29TLauncher",
+      "base": "MaverickLauncher",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "$STR_DN_CH29T",
+      "magazines": [
+        "this"
+      ],
+      "model": "carlgustav84_proxy",
+      "picture": null,
+      "source": "su25.pbo:config.cpp",
+      "category": "magazine"
+    },
+    {
+      "class": "FALMag",
+      "base": "FALBase",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "FALMag",
+      "magazines": [
+        "FAL"
+      ],
+      "model": "\\O\\Guns\\FAL",
+      "picture": "\\O\\Guns\\m_fal.paa",
+      "source": "O.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "G36a",
+      "base": "G36aBase",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "G36a",
+      "magazines": [
+        "G36aMag"
+      ],
+      "model": "\\G36A\\G36",
+      "picture": "\\G36A\\w_g36.paa",
+      "source": "G36a.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "G36aMag",
+      "base": "G36aBase",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "G36aMag",
+      "magazines": [
+        "G36a"
+      ],
+      "model": "\\G36A\\G36",
+      "picture": "\\G36a\\m_G36.paa",
+      "source": "G36a.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "Heat105",
+      "base": "Shell105",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "$STR_DN_HEAT",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "Heat120",
+      "base": "Shell120",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "$STR_DN_HEAT",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "Heat125",
+      "base": "Shell125",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "$STR_DN_HEAT",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "Heat73",
+      "base": "Shell73",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "$STR_DN_HEAT",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "HellfireLauncher",
+      "base": "AT3Launcher",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "HellfireLauncher",
+      "magazines": [
+        "this"
+      ],
+      "model": "carlgustav84_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN;Apac.pbo:config.bin;LaserGuided.pbo:config.bin;O.pbo:config.bin;su25.pbo:config.cpp",
+      "category": "magazine"
+    },
+    {
+      "class": "HellfireLauncherApach",
+      "base": "HellfireLauncher",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "$STR_DN_AH64Ammo",
+      "magazines": [
+        "this"
+      ],
+      "model": "carlgustav84_proxy",
+      "picture": null,
+      "source": "Apac.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "HellfireLauncherBMP2",
+      "base": "AT3Launcher",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "$STR_DN_ADD_BMP2_AT",
+      "magazines": [
+        "this"
+      ],
+      "model": "carlgustav84_proxy",
+      "picture": null,
+      "source": "BMP2.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "HellfireLauncherCobra",
+      "base": "HellfireLauncher",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "HellfireLauncherCobra",
+      "magazines": [
+        "this"
+      ],
+      "model": "carlgustav84_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "HellfireLauncherHind",
+      "base": "HellfireLauncher",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "HellfireLauncherHind",
+      "magazines": [
+        "this"
+      ],
+      "model": "carlgustav84_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN;O.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "HellfireLauncherKamov",
+      "base": "HellfireLauncherHind",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "$STR_DN_AT6",
+      "magazines": [
+        "this"
+      ],
+      "model": "carlgustav84_proxy",
+      "picture": null,
+      "source": "O.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "HellfireLauncherM2A2",
+      "base": "AT3Launcher",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "$STR_DN_TOW",
+      "magazines": [
+        "this"
+      ],
+      "model": "carlgustav84_proxy",
+      "picture": null,
+      "source": "M2A2.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "HK",
+      "base": "Riffle",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "HK",
+      "magazines": [
+        "this"
+      ],
+      "model": "HKM5_SD6_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN;O.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "HKG3Mag",
+      "base": "HKG3Base",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "HKG3Mag",
+      "magazines": [
+        "HKG3"
+      ],
+      "model": "\\O\\Guns\\HKG3A4",
+      "picture": "\\O\\Guns\\m_HKG3.paa",
+      "source": "O.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "HuntingRifleMag",
+      "base": "HuntingRifleBase",
+      "scopeWeapon": 1,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": "1 * \t\t256",
+      "displayName": "HuntingRifleMag",
+      "magazines": [
+        "this"
+      ],
+      "model": "\\O_wp\\Remington",
+      "picture": "m21",
+      "source": "O_WP.PBO:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "KozliceBall",
+      "base": "Riffle",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "$STR_DN_KOZLICE_BALL",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": "\\kozl\\m_kozlice2.paa",
+      "source": "kozl.pbo:config.cpp",
+      "category": "magazine"
+    },
+    {
+      "class": "KozliceShell",
+      "base": "Riffle",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "$STR_DN_KOZLICE_SHELL",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": "\\kozl\\m_kozlice1.paa",
+      "source": "kozl.pbo:config.cpp",
+      "category": "magazine"
+    },
+    {
+      "class": "LaserDesignator",
+      "base": "LaserDesignatorBase",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 16,
+      "magazineType": "6 * \t\t256",
+      "displayName": "LaserDesignator",
+      "magazines": [
+        "this"
+      ],
+      "model": "LLDR",
+      "picture": "CarlGustavLauncher",
+      "source": "LaserGuided.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "LaserDesignatorOH",
+      "base": "LaserDesignatorBase",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "LaserDesignatorOH",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "oh58.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "LaserGuidedBombLauncher",
+      "base": "HellfireLauncher",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "$STR_DN_LASER_BOMB",
+      "magazines": [
+        "this"
+      ],
+      "model": "carlgustav84_proxy",
+      "picture": "Hellfire",
+      "source": "LaserGuided.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "LAWLauncher",
+      "base": "Default",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 16,
+      "magazineType": "2 * \t\t256",
+      "displayName": "LAWLauncher",
+      "magazines": [
+        "this"
+      ],
+      "model": "law_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN;Apac.pbo:config.bin;BMP2.pbo:config.bin;LaserGuided.pbo:config.bin;M2A2.pbo:config.bin;O.pbo:config.bin;oh58.pbo:config.bin;su25.pbo:config.cpp",
+      "category": "magazine"
+    },
+    {
+      "class": "M16",
+      "base": "Riffle",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "M16",
+      "magazines": [
+        "M16",
+        "Mortar"
+      ],
+      "model": "m16_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN;O.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "M16S",
+      "base": "M16",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "M16S",
+      "magazines": [
+        "M16",
+        "Mortar"
+      ],
+      "model": "m16_proxy",
+      "picture": "M16",
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "M21",
+      "base": "SniperRiffle",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "$STR_DN_M21",
+      "magazines": [
+        "this"
+      ],
+      "model": "M21_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "M4",
+      "base": "Riffle",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "M4",
+      "magazines": [
+        "M4",
+        "Mortar"
+      ],
+      "model": "XM-177E2_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN;XMS.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "M60",
+      "base": "MachineGun7_6Manual",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": "1\t + \t16",
+      "magazineType": "2 * \t\t256",
+      "displayName": "$STR_DN_M60_MG",
+      "magazines": [
+        "this"
+      ],
+      "model": "M60_MG_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "MachineGun12_7",
+      "base": "MachineGun7_6",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "MachineGun12_7",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "MachineGun30",
+      "base": "MachineGun7_6",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "MachineGun30",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN;vulcan.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "MachineGun30A10",
+      "base": "MachineGun30",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "MachineGun30A10",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "MachineGun30A10Burst",
+      "base": "MachineGun30A10",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "MachineGun30A10Burst",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "MachineGun30E",
+      "base": "MachineGun30",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "MachineGun30E",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "MachineGun30W",
+      "base": "MachineGun30",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "MachineGun30W",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "MachineGun7_6",
+      "base": "MGun",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "MachineGun7_6",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN;vulcan.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "MaverickLauncher",
+      "base": "HellfireLauncher",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "MaverickLauncher",
+      "magazines": [
+        "this"
+      ],
+      "model": "carlgustav84_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN;su25.pbo:config.cpp",
+      "category": "magazine"
+    },
+    {
+      "class": "MM1Magazine",
+      "base": "Mm1Base",
+      "scopeWeapon": 1,
+      "scopeMagazine": 2,
+      "weaponType": "1 + \t16",
+      "magazineType": "8 * \t\t\t256",
+      "displayName": "MM1Magazine",
+      "magazines": [
+        "this"
+      ],
+      "model": "\\MM-1\\MM-1",
+      "picture": "\\MM-1\\m_mm1.paa",
+      "source": "Mm-1.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "PK",
+      "base": "MachineGun7_6Manual",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": "1\t + \t16",
+      "magazineType": "2 * \t\t256",
+      "displayName": "$STR_DN_PK",
+      "magazines": [
+        "this"
+      ],
+      "model": "PK_MG_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "Rocket57x192",
+      "base": "Rocket57x64",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "Rocket57x192",
+      "magazines": [
+        "this"
+      ],
+      "model": "carlgustav84_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "Rocket57x40Kamov",
+      "base": "Rocket57x64",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "$STR_DN_ROCKET_57",
+      "magazines": [
+        "this"
+      ],
+      "model": "carlgustav84_proxy",
+      "picture": null,
+      "source": "O.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "Rocket57x64",
+      "base": "ZuniLauncher38",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "Rocket57x64",
+      "magazines": [
+        "this"
+      ],
+      "model": "carlgustav84_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN;O.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "RPGLauncher",
+      "base": "LAWLauncher",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 16,
+      "magazineType": "2 * \t\t256",
+      "displayName": "$STR_DN_RPG",
+      "magazines": [
+        "this"
+      ],
+      "model": "RPG7_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "Shell105",
+      "base": "Shell73",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "Shell105",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "Shell120",
+      "base": "Shell105",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "Shell120",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "Shell125",
+      "base": "Shell120",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "Shell125",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "Shell73",
+      "base": "Default",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "$STR_DN_SHELL",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "SteyrMag",
+      "base": "SteyrBase",
+      "scopeWeapon": 1,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "SteyrMag",
+      "magazines": [
+        "this"
+      ],
+      "model": "\\steyr\\steyr",
+      "picture": "\\Steyr\\m_steyr.paa",
+      "source": "Steyr.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "SVDDragunov",
+      "base": "SniperRiffle",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "$STR_DN_SVD",
+      "magazines": [
+        "this"
+      ],
+      "model": "SVD_dragunov_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "UZIMag",
+      "base": "UZIBase",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "UZIMag",
+      "magazines": [
+        "UZI"
+      ],
+      "model": "\\O\\Guns\\UZI",
+      "picture": "\\O\\Guns\\m_uzi.paa",
+      "source": "O.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "VulcanCannon",
+      "base": "MachineGun30",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "$STR_DN_VULCAN20",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "vulcan.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "XMS",
+      "base": "M4",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 1,
+      "magazineType": 256,
+      "displayName": "$STR_DN_ADD_XMS",
+      "magazines": [
+        "M4",
+        "Mortar"
+      ],
+      "model": "\\XMS\\XMS",
+      "picture": "\\XMS\\w_XMS.paa",
+      "source": "XMS.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "ZsuCannon",
+      "base": "MachineGun30",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "$STR_DN_AZP23",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "magazine"
+    },
+    {
+      "class": "ZuniLauncher38",
+      "base": "AT3Launcher",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "ZuniLauncher38",
+      "magazines": [
+        "this"
+      ],
+      "model": "carlgustav84_proxy",
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN;O.pbo:config.bin;oh58.pbo:config.bin",
+      "category": "magazine"
+    },
+    {
+      "class": "ZuniLauncherOH",
+      "base": "ZuniLauncher38",
+      "scopeWeapon": 2,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": 0,
+      "displayName": "ZuniLauncherOH",
+      "magazines": [
+        "this"
+      ],
+      "model": "carlgustav84_proxy",
+      "picture": null,
+      "source": "oh58.pbo:config.bin",
+      "category": "magazine"
+    }
+  ],
+  "handgun_mag": [
+    {
+      "class": "BerettaMag",
+      "base": "BerettaBase",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 2,
+      "magazineType": 32,
+      "displayName": "BerettaMag",
+      "magazines": [
+        "Beretta"
+      ],
+      "model": "\\O\\Guns\\Beretta92F",
+      "picture": "\\O\\Guns\\zasobnik.paa",
+      "source": "O.pbo:config.bin",
+      "category": "handgun_mag"
+    },
+    {
+      "class": "CZ75Mag",
+      "base": "CZ75Base",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 2,
+      "magazineType": 32,
+      "displayName": "CZ75Mag",
+      "magazines": [
+        "CZ75"
+      ],
+      "model": "\\O\\Guns\\CZ75",
+      "picture": "\\O\\Guns\\zasobnik.paa",
+      "source": "O.pbo:config.bin",
+      "category": "handgun_mag"
+    },
+    {
+      "class": "GlockMag",
+      "base": "GlockBase",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 2,
+      "magazineType": 32,
+      "displayName": "GlockMag",
+      "magazines": [
+        "Glock"
+      ],
+      "model": "\\O\\Guns\\Glock17",
+      "picture": "\\O\\Guns\\zasobnik.paa",
+      "source": "O.pbo:config.bin",
+      "category": "handgun_mag"
+    },
+    {
+      "class": "GlockSMag",
+      "base": "GlockSBase",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 2,
+      "magazineType": 32,
+      "displayName": "GlockSMag",
+      "magazines": [
+        "GlockS"
+      ],
+      "model": "\\O_wp\\Glock17Sil",
+      "picture": "\\O\\Guns\\zasobnik.paa",
+      "source": "O_WP.PBO:config.bin",
+      "category": "handgun_mag"
+    },
+    {
+      "class": "IngramMag",
+      "base": "IngramBase",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 2,
+      "magazineType": 32,
+      "displayName": "IngramMag",
+      "magazines": [
+        "Ingram"
+      ],
+      "model": "\\O_wp\\Ingram",
+      "picture": "\\O\\Guns\\m_uzi.paa",
+      "source": "O_WP.PBO:config.bin",
+      "category": "handgun_mag"
+    },
+    {
+      "class": "RevolverMag",
+      "base": "RevolverBase",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 2,
+      "magazineType": 32,
+      "displayName": "RevolverMag",
+      "magazines": [
+        "Revolver"
+      ],
+      "model": "\\O_wp\\SaW",
+      "picture": "\\O_wp\\m_revolever.paa",
+      "source": "O_WP.PBO:config.bin",
+      "category": "handgun_mag"
+    },
+    {
+      "class": "SkorpionMag",
+      "base": "SkorpionBase",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 2,
+      "magazineType": 32,
+      "displayName": "SkorpionMag",
+      "magazines": [
+        "Skorpion"
+      ],
+      "model": "\\O\\Guns\\SA61Skorpion",
+      "picture": "\\O\\Guns\\zasobnik.paa",
+      "source": "O.pbo:config.bin",
+      "category": "handgun_mag"
+    },
+    {
+      "class": "TokarevMag",
+      "base": "TokarevBase",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 2,
+      "magazineType": 32,
+      "displayName": "TokarevMag",
+      "magazines": [
+        "Tokarev"
+      ],
+      "model": "\\O\\Guns\\TokarevT33",
+      "picture": "\\O\\Guns\\zasobnik.paa",
+      "source": "O.pbo:config.bin",
+      "category": "handgun_mag"
+    }
+  ],
+  "item": [
+    {
+      "class": "Flare",
+      "base": "GrenadeLauncher",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 0,
+      "magazineType": 256,
+      "displayName": "$STR_DN_FLARE",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "item"
+    },
+    {
+      "class": "FlareGreen",
+      "base": "Flare",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 0,
+      "magazineType": 256,
+      "displayName": "$STR_DN_FLARE_GREEN",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "item"
+    },
+    {
+      "class": "FlareRed",
+      "base": "Flare",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 0,
+      "magazineType": 256,
+      "displayName": "$STR_DN_FLARE_RED",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "item"
+    },
+    {
+      "class": "FlareYellow",
+      "base": "Flare",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 0,
+      "magazineType": 256,
+      "displayName": "$STR_DN_FLARE_YELLOW",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "item"
+    },
+    {
+      "class": "GrenadeLauncher",
+      "base": "Default",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 0,
+      "magazineType": "2 * \t\t256",
+      "displayName": "GrenadeLauncher",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN;6G30.pbo:config.bin;Mm-1.pbo:config.bin",
+      "category": "item"
+    },
+    {
+      "class": "HandGrenade",
+      "base": "GrenadeLauncher",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 0,
+      "magazineType": 256,
+      "displayName": "$STR_DN_HAND_GRENADE",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "item"
+    },
+    {
+      "class": "Mine",
+      "base": "TimeBomb",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": "2 * \t\t256",
+      "displayName": "$STR_DN_MINE",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "item"
+    },
+    {
+      "class": "MineE",
+      "base": "TimeBomb",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 65536,
+      "magazineType": "2 * \t\t256",
+      "displayName": "$STR_DN_MINE",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": "mine",
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "item"
+    },
+    {
+      "class": "Mortar",
+      "base": "GrenadeLauncher",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 0,
+      "magazineType": "2 * \t\t256",
+      "displayName": "$STR_DN_MORTAR_W",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "item"
+    },
+    {
+      "class": "PipeBomb",
+      "base": "Put",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 0,
+      "magazineType": "2 * \t\t256",
+      "displayName": "$STR_DN_PIPE_BOMB",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "item"
+    },
+    {
+      "class": "SmokeShell",
+      "base": "HandGrenade",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 0,
+      "magazineType": 256,
+      "displayName": "$STR_DN_SMOKE",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "item"
+    },
+    {
+      "class": "SmokeShellGreen",
+      "base": "SmokeShell",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 0,
+      "magazineType": 256,
+      "displayName": "$STR_DN_SMOKE_GREEN",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": "smokeshell",
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "item"
+    },
+    {
+      "class": "SmokeShellRed",
+      "base": "SmokeShell",
+      "scopeWeapon": 0,
+      "scopeMagazine": 2,
+      "weaponType": 0,
+      "magazineType": 256,
+      "displayName": "$STR_DN_SMOKE_RED",
+      "magazines": [
+        "this"
+      ],
+      "model": null,
+      "picture": null,
+      "source": "/home/ubuntu/cwr-game/Remaster/BIN/CONFIG.BIN",
+      "category": "item"
+    }
+  ]
+}

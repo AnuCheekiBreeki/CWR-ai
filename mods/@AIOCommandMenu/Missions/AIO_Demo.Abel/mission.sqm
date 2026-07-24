@@ -1,0 +1,47 @@
+version=11;
+class Mission
+{
+	randomSeed=7710001;
+	class Intel
+	{
+		briefingName="AIO Command Menu";
+		overviewText="Poseidon MVP: cheat menu + Virtual Arsenal.";
+	};
+	class Groups
+	{
+		items=1;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2650.0,40.0,2550.0};
+					id=0;
+					side="WEST";
+					vehicle="SoldierWB";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=1.0;
+				};
+			};
+		};
+	};
+};
+class Intro
+{
+	randomSeed=7710002;
+	class Intel {};
+};
+class OutroWin
+{
+	randomSeed=7710003;
+	class Intel {};
+};
+class OutroLoose
+{
+	randomSeed=7710004;
+	class Intel {};
+};

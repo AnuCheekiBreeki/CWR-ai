@@ -1,0 +1,18 @@
+; Toggle invulnerability on player
+? (isNil "AIO_GodMode") : AIO_GodMode = false
+
+? AIO_GodMode : goto "off"
+
+AIO_GodMode = true
+player allowDamage false
+hint "AIO: God mode ON"
+goto "done"
+
+#off
+AIO_GodMode = false
+player allowDamage true
+hint "AIO: God mode OFF"
+
+#done
+~0.05
+exit

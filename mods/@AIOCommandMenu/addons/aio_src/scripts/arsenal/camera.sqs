@@ -1,0 +1,37 @@
+; Create an orbit camera looking at the player (ACE/A3 arsenal-style preview).
+
+? isNull player : exit
+
+VA_Cam = "camera" camCreate (position player)
+VA_Cam cameraEffect ["internal", "back"]
+showCinemaBorder false
+
+_ang = VA_CamAngle
+_dist = VA_CamDist
+_h = VA_CamHeight
+
+#loop
+~0.05
+? isNull VA_Cam : exit
+? !(alive player) : goto "cleanup"
+? !(ctrlVisible 77030) : goto "cleanup"
+
+_ang = _ang + 0.4
+VA_CamAngle = _ang
+_px = (position player) select 0
+_py = (position player) select 1
+_pz = (position player) select 2
+_rad = _ang * 3.14159265 / 180
+_cx = _px + _dist * (sin _rad)
+_cy = _py + _dist * (cos _rad)
+_cz = _pz + _h
+VA_Cam camSetPos [_cx, _cy, _cz]
+VA_Cam camSetTarget player
+VA_Cam camCommit 0
+goto "loop"
+
+#cleanup
+VA_Cam cameraEffect ["terminate", "back"]
+camDestroy VA_Cam
+VA_Cam = objNull
+exit

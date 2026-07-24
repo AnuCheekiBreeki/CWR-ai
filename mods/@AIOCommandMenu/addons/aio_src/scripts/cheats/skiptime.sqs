@@ -1,0 +1,5 @@
+; Skip 1 hour
+skipTime 1
+hint "AIO: Skipped 1 hour"
+~0.05
+exit

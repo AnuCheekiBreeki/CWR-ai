@@ -1,0 +1,18 @@
+; Toggle captive (enemies ignore player)
+? (isNil "AIO_Captive") : AIO_Captive = false
+
+? AIO_Captive : goto "off"
+
+AIO_Captive = true
+player setCaptive true
+hint "AIO: Captive ON"
+goto "done"
+
+#off
+AIO_Captive = false
+player setCaptive false
+hint "AIO: Captive OFF"
+
+#done
+~0.05
+exit
