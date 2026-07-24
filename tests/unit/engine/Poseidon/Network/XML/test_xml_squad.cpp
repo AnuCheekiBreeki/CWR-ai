@@ -2,6 +2,8 @@
 #include <Poseidon/Network/XML/Xml.hpp>
 #include <Poseidon/IO/Streams/QBStream.hpp>
 #include "../../test_fixtures.hpp"
+#include <filesystem>
+#include <fstream>
 #include <string.h>
 #include <Poseidon/Foundation/Strings/RString.hpp>
 

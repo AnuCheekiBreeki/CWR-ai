@@ -52,9 +52,9 @@ ContextList ContextsForCategory(ControlsCategory cat)
     static constexpr InputContext pilot[] = {InputContext::HeliPilot, InputContext::PlanePilot};
     static constexpr InputContext gunner[] = {InputContext::TankGunner, InputContext::Gunner};
     static constexpr InputContext common[] = {
-        InputContext::Menu,       InputContext::Infantry,  InputContext::CarDriver, InputContext::TankDriver,
+        InputContext::Menu,       InputContext::Infantry,  InputContext::CarDriver,  InputContext::TankDriver,
         InputContext::TankGunner, InputContext::HeliPilot, InputContext::PlanePilot, InputContext::ShipDriver,
-        InputContext::Gunner,     InputContext::Spectator, InputContext::Map,       InputContext::Chat,
+        InputContext::Gunner,     InputContext::Spectator, InputContext::Map,        InputContext::Chat,
         InputContext::Editor,
     };
 
@@ -445,12 +445,8 @@ static float QueryProfileAction(const Input& in, const InputProfile& profile, Us
     return sum;
 }
 
-static bool QueryProfileActionToDo(Input& in,
-                                   const InputProfile& profile,
-                                   UserAction action,
-                                   bool& actionDone,
-                                   bool reset,
-                                   bool checkFocus)
+static bool QueryProfileActionToDo(Input& in, const InputProfile& profile, UserAction action, bool& actionDone,
+                                   bool reset, bool checkFocus)
 {
     if (actionDone && in.actionDone[action])
         return false;
@@ -552,14 +548,17 @@ void InputSubsystem::ComputeMovementState()
             lookAroundEnabled_ = lookAroundToggled_;
 
         if (oldLookAround != lookAroundEnabled_)
+        {
             freelookChanged_ = true;
+            if (oldLookAround && !lookAroundEnabled_)
+                GInput.cursor.aimDeltaX = GInput.cursor.aimDeltaY = GInput.cursor.aimDeltaZ = 0;
+        }
 
         moveUp_ += GetAction(UAMoveUp, true);
         moveDown_ += GetAction(UAMoveDown, true);
         moveLeft_ += GetAction(UAMoveLeft, true);
         moveRight_ += GetAction(UAMoveRight, true);
     }
-
 }
 
 void InputSubsystem::SyncToGInput()
@@ -985,14 +984,14 @@ float InputSubsystem::GetKey(int packedKey, bool checkFocus) const
 {
     const int value = InputBindingValue(packedKey);
     return InputBindingIsDoubleTap(packedKey) ? QueryDoubleTapKey(GInput, value, checkFocus)
-                                             : QueryKey(GInput, value, checkFocus);
+                                              : QueryKey(GInput, value, checkFocus);
 }
 
 bool InputSubsystem::GetKeyToDo(int packedKey, bool reset, bool checkFocus)
 {
     const int value = InputBindingValue(packedKey);
     return InputBindingIsDoubleTap(packedKey) ? QueryDoubleTapKeyToDo(GInput, value, reset, checkFocus)
-                                             : QueryKeyToDo(GInput, value, reset, checkFocus);
+                                              : QueryKeyToDo(GInput, value, reset, checkFocus);
 }
 
 int InputSubsystem::CheatActivated() const
@@ -1065,8 +1064,18 @@ void InputSubsystem::LoadKeys()
     GInput.mouse.buttonsReversed = mouse.buttonsReversed;
     GInput.mouse.sensitivityX = mouse.sensitivityX;
     GInput.mouse.sensitivityY = mouse.sensitivityY;
+    GInput.mouse.tuning.baseScale = mouse.baseScale;
+    GInput.mouse.tuning.dpiNormalize = mouse.dpiNormalize;
+    GInput.mouse.tuning.mouseDpi = mouse.mouseDpi;
+    GInput.mouse.tuning.referenceDpi = mouse.referenceDpi;
+    GInput.mouse.tuning.smoothing = mouse.smoothing;
+    GInput.mouse.tuning.acceleration = mouse.acceleration;
+    GInput.mouse.tuning.accelExponent = mouse.accelExponent;
+    GInput.mouse.tuning.menuCursorScale = mouse.menuCursorScale;
+    GInput.mouse.tuning.extendedRange = mouse.extendedRange;
 
     GInput.gamepad.enabled = gamepad.enabled;
+    GInput.gamepad.reverseYStick = gamepad.reverseYStick;
     GInput.gamepad.deadzoneStick = gamepad.deadzoneStick;
     GInput.gamepad.deadzoneTrigger = gamepad.deadzoneTrigger;
     GInput.gamepad.lookSensitivity = gamepad.lookSensitivity;
@@ -1079,6 +1088,7 @@ void InputSubsystem::SaveKeys()
 
     GamepadConfig gamepad;
     gamepad.enabled = GInput.gamepad.enabled;
+    gamepad.reverseYStick = GInput.gamepad.reverseYStick;
     gamepad.deadzoneStick = GInput.gamepad.deadzoneStick;
     gamepad.deadzoneTrigger = GInput.gamepad.deadzoneTrigger;
     gamepad.lookSensitivity = GInput.gamepad.lookSensitivity;
@@ -1089,6 +1099,15 @@ void InputSubsystem::SaveKeys()
     mouse.buttonsReversed = GInput.mouse.buttonsReversed;
     mouse.sensitivityX = GInput.mouse.sensitivityX;
     mouse.sensitivityY = GInput.mouse.sensitivityY;
+    mouse.baseScale = GInput.mouse.tuning.baseScale;
+    mouse.dpiNormalize = GInput.mouse.tuning.dpiNormalize;
+    mouse.mouseDpi = GInput.mouse.tuning.mouseDpi;
+    mouse.referenceDpi = GInput.mouse.tuning.referenceDpi;
+    mouse.smoothing = GInput.mouse.tuning.smoothing;
+    mouse.acceleration = GInput.mouse.tuning.acceleration;
+    mouse.accelExponent = GInput.mouse.tuning.accelExponent;
+    mouse.menuCursorScale = GInput.mouse.tuning.menuCursorScale;
+    mouse.extendedRange = GInput.mouse.tuning.extendedRange;
     mouse.Save(MouseCfgPath());
 }
 
@@ -1208,7 +1227,8 @@ UserActionDesc* InputSubsystem::GetUserActionDesc()
         UserActionDesc("PrevChannel", IDS_USRACT_PREV_CHANNEL, SDL_SCANCODE_COMMA, -1),
         UserActionDesc("NextChannel", IDS_USRACT_NEXT_CHANNEL, SDL_SCANCODE_PERIOD, -1),
         UserActionDesc("Chat", IDS_USRACT_CHAT, SDL_SCANCODE_SLASH, -1),
-        UserActionDesc("VoiceOverNet", IDS_USRACT_VOICE_OVER_NET, SDL_SCANCODE_CAPSLOCK, -1),
+        UserActionDesc("VoiceOverNet", IDS_USRACT_VOICE_OVER_NET, -1),
+        UserActionDesc("VoiceOverNetPushToTalk", IDS_USRACT_VOICE_OVER_NET_PUSH_TO_TALK, SDL_SCANCODE_CAPSLOCK, -1),
         UserActionDesc("NetworkStats", IDS_USRACT_NETWORK_STATS, SDL_SCANCODE_I, -1),
         UserActionDesc("NetworkPlayers", IDS_USRACT_NETWORK_PLAYERS, SDL_SCANCODE_P, -1),
         UserActionDesc("SelectAll", IDS_USRACT_SELECT_ALL, SDL_SCANCODE_GRAVE, -1),
@@ -1228,6 +1248,11 @@ UserActionDesc* InputSubsystem::GetUserActionDesc()
         UserActionDesc("Cheat2", IDS_USRACT_CHEAT_2, SDL_SCANCODE_RALT, -1),
 #endif
     };
+    // The table is indexed by UserAction, and per-action arrays (bindings, KeyList
+    // userKeys[UAN]) are sized by UAN. If a new action is added to the enum without
+    // a matching row here, indexing runs off the end. Keep them one-to-one.
+    static_assert(std::size(userActionDesc) == UAN,
+                  "UserActionDesc table must have exactly one entry per UserAction (UAN)");
     return userActionDesc;
 }
 
@@ -1250,6 +1275,18 @@ void InputSubsystem::SetJoystickEnabled(bool v)
 void InputSubsystem::ToggleJoystickEnabled()
 {
     GInput.gamepad.enabled = !GInput.gamepad.enabled;
+}
+bool InputSubsystem::IsReverseJoystick() const
+{
+    return GInput.gamepad.reverseYStick;
+}
+void InputSubsystem::SetReverseJoystick(bool v)
+{
+    GInput.gamepad.reverseYStick = v;
+}
+void InputSubsystem::ToggleReverseJoystick()
+{
+    GInput.gamepad.reverseYStick = !GInput.gamepad.reverseYStick;
 }
 bool InputSubsystem::IsMouseButtonsReversed() const
 {
@@ -1278,6 +1315,14 @@ void InputSubsystem::SetMouseSensitivityX(float v)
 void InputSubsystem::SetMouseSensitivityY(float v)
 {
     GInput.mouse.sensitivityY = v;
+}
+MouseTuning& InputSubsystem::GetMouseTuning()
+{
+    return GInput.mouse.tuning;
+}
+const MouseTuning& InputSubsystem::GetMouseTuning() const
+{
+    return GInput.mouse.tuning;
 }
 
 const AutoArray<int>& InputSubsystem::GetUserKeys(UserAction action) const

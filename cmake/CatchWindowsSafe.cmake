@@ -5,6 +5,7 @@ set(
     "${CMAKE_SOURCE_DIR}/cmake/CatchAddWindowsSafeTests.cmake"
     CACHE INTERNAL "OFPR Catch2 discovery with Windows-safe CTest names" FORCE
 )
+include("${_CATCH_DISCOVER_TESTS_SCRIPT}")
 
 function(ofpr_catch_discover_tests TARGET)
     catch_discover_tests(${TARGET}

@@ -334,7 +334,7 @@ fn compress_artifact(mut raw: Box<dyn Read>) -> Result<(NamedTempFile, u64)> {
         // Spread compression across cores — at level 19 a multi-GB mod is otherwise CPU-bound on
         // one thread for tens of minutes. Falls back to single-threaded if unsupported.
         let workers = std::thread::available_parallelism().map_or(1, std::num::NonZeroUsize::get);
-        let _ = encoder.multithread(workers as u32);
+        let _ = encoder.multithread(u32::try_from(workers).unwrap_or(u32::MAX));
         std::io::copy(&mut raw, &mut encoder).context("compressing artifact")?;
         encoder.finish().context("finishing zstd stream")?;
     }
@@ -519,8 +519,7 @@ fn run_install(args: &InstallArgs, master: &str, insecure: bool) -> Result<()> {
         let folder = entry["folderName"]
             .as_str()
             .filter(|s| !s.trim().is_empty())
-            .map(str::to_string)
-            .unwrap_or_else(|| format!("@{mod_id}"));
+            .map_or_else(|| format!("@{mod_id}"), str::to_string);
         if !mods.iter().any(|(m, _, _)| m == &mod_id) {
             mods.push((mod_id, folder, entry.clone()));
         }
@@ -602,12 +601,21 @@ fn print_query_status(target: &str, status: &ServerStatus) {
     println!("  state:    {}", s.game_state);
     println!("  password: {}", yes_no(s.password));
     println!(
-        "  version:  actual {} / required {}",
-        s.actual_version, s.required_version
+        "  version:  actual {}{} / required {}",
+        s.actual_version,
+        format_version_tag(s.version_tag.as_deref()),
+        s.required_version
     );
     if let Some(mods) = &s.mod_list {
         println!("  mod:      {mods}");
         println!("  equalMod: {}", yes_no(s.equal_mod_required));
+    }
+}
+
+fn format_version_tag(tag: Option<&str>) -> String {
+    match tag.map(str::trim).filter(|tag| !tag.is_empty()) {
+        Some(tag) => format!(" {tag}"),
+        None => String::new(),
     }
 }
 
@@ -750,8 +758,9 @@ fn print_server_detail(detail: &serde_json::Value) {
         }
     }
     println!(
-        "  versions:  actual {} / required {}",
+        "  versions:  actual {}{} / required {}",
         int("actver"),
+        format_version_tag(Some(text("vertag"))).as_str(),
         int("reqver")
     );
     println!("  transport: {} / {}", text("platform"), text("impl"));
@@ -967,7 +976,7 @@ mod tests {
         pbo.write(&mut raw).unwrap();
 
         let (tmp, compressed_len) = compress_artifact(Box::new(Cursor::new(raw.clone()))).unwrap();
-        assert!(compressed_len > 0 && (compressed_len as usize) < raw.len());
+        assert!(compressed_len > 0 && compressed_len < raw.len() as u64);
         let compressed = std::fs::read(tmp.path()).unwrap();
         assert_eq!(compressed.len() as u64, compressed_len);
 
