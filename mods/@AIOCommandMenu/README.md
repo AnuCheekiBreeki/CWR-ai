@@ -3,27 +3,32 @@
 Poseidon / Cold War Assault Remastered MVP inspired by
 [All-In-One Command Menu](https://github.com/Leopard20/All-In-One-Command-Menu).
 
-Arma 3 AIO relies on CBA, `showCommandingMenu`, Zeus, and ACE — none of that
-exists here. This mod is a Poseidon-native hub:
+Arma 3 AIO opens cheats with `showCommandingMenu "#USER:…"`. Poseidon has no
+scripted commanding-menu API, so the cheat hub is a **visual clone** of the
+vanilla radio / commanding menu (`CfgInGameUI >> Menu`: right-side panel,
+`tahomaB24`, numbered `CT_ACTIVETEXT` rows, caption strip, Backspace/Escape).
 
-- **Command menu** dialog (list + Execute)
+- **Radio-style cheat menu** (click entries like vanilla command menu)
 - **Virtual Arsenal** (embedded, same catalog/camera flow as `@VirtualArsenal`)
 - **Cheats**: heal, god mode, refill mags, map teleport, skip time, accTime, captive
 
 ## Features
 
-| Menu entry | Action |
+| Key lookalike | Action |
 |---|---|
-| Virtual Arsenal | Gear browser (primary / launcher / handgun / optics / mags / items) |
-| Heal | `setDamage 0` |
-| God mode | toggle `allowDamage` |
-| Refill magazines | top up for equipped weapons |
-| Teleport | `forceMap` + `onMapSingleClick` |
-| Skip time | `skipTime 1` |
-| AccTime | cycle 1x → 2x → 4x |
-| Captive | toggle `setCaptive` |
+| 1 Virtual Arsenal | Gear browser |
+| 2 Heal up! | `setDamage 0` |
+| 3 God mode | toggle `allowDamage` |
+| 4 Add ammo | top up for equipped weapons |
+| 5 Teleport | `forceMap` + `onMapSingleClick` |
+| 6 Skip time +1h | `skipTime 1` |
+| 7 AccTime cycle | 1x → 2x → 4x |
+| 8 Captive toggle | `setCaptive` |
+| Backspace Back | close (Escape also works) |
 
 Scroll-menu UserActions on the player: **AIO Command Menu** and **Virtual Arsenal**.
+Click menu rows (or focus with arrows/Tab and confirm) — same interaction model as
+mouse selection on the vanilla command menu.
 
 ## Important: dialogs and `bin/resource.cpp`
 

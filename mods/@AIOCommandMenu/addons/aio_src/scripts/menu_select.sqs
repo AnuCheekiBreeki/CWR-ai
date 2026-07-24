@@ -1,9 +1,9 @@
-; Dispatch selected AIO menu entry.
+; Kept for compatibility — radio-menu items call cheats directly via ActiveText action.
+; Optional: ["cmd"] exec "\aio\scripts\menu_select.sqs"
 
-_sel = lbCurSel 77130
-? _sel < 0 : hint "Select an entry"; exit
-_cmd = lbData [77130, _sel]
-? _cmd == "" : exit
+_cmd = ""
+? (count _this > 0) : _cmd = _this select 0
+? (_cmd == "") : exit
 
 closeDialog 0
 

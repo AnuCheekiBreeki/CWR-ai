@@ -1,4 +1,4 @@
-; AIO Command Menu — root list (arsenal + cheats). Poseidon MVP.
+; AIO Command Menu — open vanilla-style radio / commanding menu lookalike.
 ; [] exec "\aio\scripts\open_menu.sqs"
 
 ? !(alive player) : exit
@@ -10,29 +10,11 @@ _ok = createDialog "RscDisplayAIOCommandMenu"
 ? (isNil "AIO_Captive") : AIO_Captive = false
 ? (isNil "AIO_AccTime") : AIO_AccTime = 1
 
-lbClear 77130
-_i = lbAdd [77130, "1. Virtual Arsenal"]
-lbSetData [77130, _i, "arsenal"]
-_i = lbAdd [77130, "2. Heal player"]
-lbSetData [77130, _i, "heal"]
-_i = lbAdd [77130, "3. God mode (toggle)"]
-lbSetData [77130, _i, "god"]
-_i = lbAdd [77130, "4. Refill magazines"]
-lbSetData [77130, _i, "ammo"]
-_i = lbAdd [77130, "5. Teleport (map click)"]
-lbSetData [77130, _i, "teleport"]
-_i = lbAdd [77130, "6. Skip time +1 hour"]
-lbSetData [77130, _i, "skiptime"]
-_i = lbAdd [77130, "7. AccTime cycle (1x/2x/4x)"]
-lbSetData [77130, _i, "acctime"]
-_i = lbAdd [77130, "8. Captive toggle"]
-lbSetData [77130, _i, "captive"]
-
-lbSetCurSel [77130, 0]
-
-? AIO_GodMode : ctrlSetText [77111, "God mode: ON | Poseidon MVP"]
-? !(AIO_GodMode) : ctrlSetText [77111, "God mode: OFF | Select + Execute"]
-
-buttonSetAction [77141, "[] exec ""\aio\scripts\menu_select.sqs"""]
-buttonSetAction [77142, "closeDialog 0"]
+; Refresh toggle labels (same pattern as original AIO cheats menu)
+? AIO_GodMode : ctrlSetText [77103, "3  God mode: ON"]
+? !(AIO_GodMode) : ctrlSetText [77103, "3  God mode: OFF"]
+? AIO_Captive : ctrlSetText [77108, "8  Captive: ON"]
+? !(AIO_Captive) : ctrlSetText [77108, "8  Captive: OFF"]
+ctrlSetText [77107, format ["7  AccTime x%1", AIO_AccTime]]
+ctrlSetText [77110, "Cheats"]
 exit
