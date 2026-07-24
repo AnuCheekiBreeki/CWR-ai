@@ -1,0 +1,49 @@
+; Fill the left listbox from the active VA_Category catalog arrays.
+
+lbClear 77030
+
+_list = []
+? VA_Category == "primary" : _list = VA_Primary
+? VA_Category == "secondary" : _list = VA_Secondary
+? VA_Category == "handgun" : _list = VA_Handgun
+? VA_Category == "binocular" : _list = VA_Binocular
+? VA_Category == "magazine" : _list = VA_Magazine
+? VA_Category == "item" : _list = VA_Item
+
+_i = 0
+_n = count _list
+#loop
+? _i >= _n : goto "equipped"
+_name = _list select _i
+_idx = lbAdd [77030, _name]
+lbSetData [77030, _idx, _name]
+_i = _i + 1
+goto "loop"
+
+#equipped
+; Refresh equipped summary on the right
+lbClear 77031
+_w = weapons player
+_m = magazines player
+_j = 0
+_nw = count _w
+#wloop
+? _j >= _nw : goto "mags"
+_wn = _w select _j
+lbAdd [77031, format ["W: %1", _wn]]
+_j = _j + 1
+goto "wloop"
+
+#mags
+_j = 0
+_nm = count _m
+#mloop
+? _j >= _nm : goto "done"
+_mn = _m select _j
+lbAdd [77031, format ["M: %1", _mn]]
+_j = _j + 1
+goto "mloop"
+
+#done
+ctrlSetText [77010, format ["VIRTUAL ARSENAL - %1 (%2)", VA_Category, _n]]
+exit
