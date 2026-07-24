@@ -1,0 +1,5 @@
+// Virtual Arsenal demo mission — dialog lives in description.ext (ExtParsMission).
+#include "resource_arsenal.hpp"
+
+respawn = "BASE";
+respawnDelay = 3;

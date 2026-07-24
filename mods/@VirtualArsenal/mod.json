@@ -1,0 +1,6 @@
+{
+  "modId": "virtual_arsenal",
+  "name": "Virtual Arsenal",
+  "version": "1.0.0",
+  "description": "Arma 3 / ACE-style gear browser for Poseidon/CWR: lists loaded CfgWeapons, 3D orbit preview, apply to player."
+}
